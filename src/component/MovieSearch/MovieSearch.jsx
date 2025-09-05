@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import CardItems from "../CardItems/CardItems"
 
+
 const MovieSearch = () => {
     const [movieData, setMovieData] = useState([])
     const [userInput, setUserInput] = useState("");
@@ -46,12 +47,14 @@ const MovieSearch = () => {
             <button onClick={searchMovies}>Search</button>
 
 
-           
 
-                {movieData.map(eachItem => (
-                  < CardItems key={eachItem.id} value = {eachItem}/>
-                ))}
-         
+
+           <div >
+             {movieData.map(eachItem => (
+                < CardItems key={eachItem.id} value={eachItem} />
+            ))}
+
+           </div>
 
 
         </>
