@@ -42,7 +42,7 @@ const Footer = () => {
 
        
         <Typography variant="body2" align="center" sx={{ opacity: 0.7 }}>
-          © {new Date().getFullYear()} TMDB Clone. All Rights Reserved.
+          © {new Date().getFullYear()} TMDB Clone. All Rights a re Reserved.
         </Typography>
       </Container>
     </Box>
