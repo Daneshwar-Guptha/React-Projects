@@ -28,11 +28,12 @@ const Trending = () => {
         setTrendingMovies(result)
 
     }
-
+ 
     useEffect(() => {
         getTrendingDetails()
     }, [mode])
 
+    
     return (
         <>
             <div className="trending-conatiner">

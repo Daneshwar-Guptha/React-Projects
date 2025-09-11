@@ -24,9 +24,12 @@ const Popular = ()=>{
 
     }
 
+
     useEffect(() => {
         getTrendingDetails()
     }, [])
+
+     console.log(TrendingMovies)
 
     return (
         <>
@@ -37,8 +40,9 @@ const Popular = ()=>{
                 {TrendingMovies.map(eachItem => (
 
                     <TrendingMovieCard key={eachItem.id} value={eachItem}  />
-
+                  
                 ))}
+               
             </ul>
         </>
     )

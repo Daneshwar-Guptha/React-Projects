@@ -9,6 +9,7 @@ import Popular from './component/Popular/Popular'
 import TvList from './component/TvList/TvList'
 import Navbar from './component/Navbar/Navbar'
 import Footer from './component/Footer/Footer'
+import Practice  from './component/Prcatice/Practice'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
       <MovieSearch />
       <Footer/>
+      <Practice/>
       
     </>
   )
