@@ -19,14 +19,7 @@ function App() {
   return (
     <>
 
-      {/* 
-      <Navbar />
-      <Trending />
-      <Popular />
-      <TvList />
-      <MovieSearch />
-      <Footer />
-      <Practice /> */}
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details/:id" element={<MovieItem />} />
