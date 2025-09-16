@@ -6,6 +6,7 @@ import CardItems from "../CardItems/CardItems"
 const MovieSearch = () => {
     const [movieData, setMovieData] = useState([])
     const [userInput, setUserInput] = useState("");
+    const [searchInput,setSearchInput] = useState("");
 
     const options = {
         method: 'GET',
@@ -21,6 +22,7 @@ const MovieSearch = () => {
         const data = await response.json()
         console.log(data.results)
         setMovieData(data.results)
+        setUserInput("");
     }
 
 
@@ -37,15 +39,25 @@ const MovieSearch = () => {
         getMoviesDetails(userInput)
 
     }
+    const handleBlur = ()=>{
+        if(!userInput.trim()){
+           setSearchInput("please Enter details"); 
+        }
+        else{
+            setSearchInput("");
+        }
+        
+    } 
 
     return (
         <>
             <h1>Enter movie Name</h1>
 
-            <input type="text" id="searchMovies" onChange={getMovieDetails} />
+            <input type="text" id="searchMovies" onChange={getMovieDetails} value={userInput} onBlur={handleBlur} />
 
             <button onClick={searchMovies}>Search</button>
-
+            <p>{searchInput}</p>
+            
 
 
 
