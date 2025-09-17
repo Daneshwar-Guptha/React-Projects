@@ -33,12 +33,15 @@ const MovieItem = () => {
 
             <div >
                 <img src={`https://media.themoviedb.org/t/p/w440_and_h660_face/${movie.poster_path}`} className="image" />
-
+                <p>{ }</p>
 
 
                 <div>
-                    <h1>{movie.title}</h1>
-                    
+                    <h1>{movie.original_title
+}</h1>
+                    <h1>{movie.release_date}</h1>
+                    <p>{movie.overview}</p>
+
                 </div>
 
             </div>
